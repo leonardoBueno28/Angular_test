@@ -1,0 +1,39 @@
+.contentCountries {
+    border-bottom: 1px solid gray;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.contentCountries:hover {
+    background-color: #ececec;
+    color: black;
+}
+
+.container {
+    padding: 5%;
+    margin: auto;
+    background: white;
+    margin-top: 2%;
+    border-radius: 12px;
+}
+
+.card-img-top {
+    margin: auto;
+    width: 38%;
+}
+
+.search {
+    margin-bottom: 2%;
+    width: 100%;
+    border-radius: 6px;
+    border: .5px solid gray;
+    padding: 2%;
+}
+
+.background {
+    height: -webkit-fill-available;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+}
