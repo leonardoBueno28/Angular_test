@@ -48,12 +48,23 @@ export class ListOfCountriesComponent implements OnInit {
         this.data = this.array;
       }
       if (this.data.length > 0) {
+        this.data.forEach(element => {
+          if(!element.region){
+            element.region = 'Sin región'
+          }
+        });
         let agroup = this.data.reduce(function (r, a) {
           r[a.region] = r[a.region] || [];
           r[a.region].push(a);
           return r;
         }, Object.create(null));
         this.groupBy = Object.entries(agroup);
+        console.log(this.groupBy)
+        this.groupBy.sort(function(a, b){
+          if(a[0] < b[0]) { return -1; }
+          if(a[0] > b[0]) { return 1; }
+          return 0;
+      })
         this.cargando = true;
       }
     });
