@@ -33,7 +33,7 @@ export class ListOfCountriesComponent implements OnInit {
       this.array = response;
       this.service.addAllCountries(this.array);
       this.favoriteList = this.service.getFavorites();      
-      if (this.favoriteList?.length > 0) {
+      if (this.favoriteList && this.favoriteList.length > 0) {
         this.favoriteList.forEach((element) => {
           let i = this.array.findIndex((x) => x.name === element.name);
           if (i !== -1) {
